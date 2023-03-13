@@ -136,11 +136,12 @@ python h52vtp.py --surf_file path_to_surf_file --surf_name train_loss --zmax  10
 As the second part of you mini-project, you are required to plot the trajectory of a simple network. This can be done by:
 
 1. Defining the architecture inside a `cifar10/models/your_network.py`. Tip: Keep the architecture simple, as depth can play a big role in training. See `cifar10/models/simplenet.py` for reference. 
-2. Train the network with different sets of hyper-parameters for 300 epochs and save them using the format `model_{epoch}.pth`, at multiples of 10 epochs, under a `./your_model/` folder. 
+2. Train the network with different sets of hyper-parameters for **100** epochs and save them using the format `model_{epoch}.pth`, **every epoch**, under a `./your_model/` folder. 
 3. Run the code below to generate the plot.
 ```
-python plot_trajectory.py --dataset cifar10 --model your_network --model_folder ./mymodels --start_epoch 0 --max_epoch 300 --save_epoch 10 --prefix model_ --suffix .pth
+python plot_trajectory.py --dataset cifar10 --model your_network --model_folder ./mymodels --start_epoch 0 --max_epoch 100 --save_epoch 1 --prefix model_ --suffix .pth
 ```
+**Please notice the change in the number of epochs to 100.**
 
 ## Reference
 
